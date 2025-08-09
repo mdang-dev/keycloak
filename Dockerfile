@@ -6,5 +6,4 @@ ENV KC_FEATURES=token-exchange,admin-fine-grained-authz
 
 EXPOSE 9191
 
-# Start Keycloak in dev mode
 CMD ["start-dev", "--http-port=9191"]
