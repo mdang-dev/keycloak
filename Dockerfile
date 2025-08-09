@@ -6,4 +6,4 @@ ENV KC_FEATURES=token-exchange,admin-fine-grained-authz
 
 EXPOSE 9191
 
-CMD ["start-dev", "--http-port=9191"]
+CMD ["start-dev", "--http-port=${PORT}"]
