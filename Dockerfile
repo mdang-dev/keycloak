@@ -3,5 +3,7 @@ FROM quay.io/keycloak/keycloak:26.3.2
 ENV KC_BOOTSTRAP_ADMIN_USERNAME=admin
 ENV KC_BOOTSTRAP_ADMIN_PASSWORD=admin1234
 ENV KC_FEATURES=token-exchange,admin-fine-grained-authz
+ENV KC_HTTP_HOST=0.0.0.0
+ENV KC_HTTP_PORT=${PORT}
 
-CMD ["/bin/sh", "-c", "/opt/keycloak/bin/kc.sh start-dev --http-host=0.0.0.0 --http-port=$PORT"]
+CMD ["start-dev"]
